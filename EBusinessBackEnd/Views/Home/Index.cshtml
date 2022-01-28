@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Team>
 @{
     ViewData["Title"] = "Index";
 }
@@ -177,63 +177,23 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="card w-100">
-                        <img src="https://bootstrapmade.com/demo/templates/eBusiness/assets/img/team/1.jpg"
-                             class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">John Mickel</h5>
-                            <p class="card-text">SEO.</p>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="card w-100">
-                        <div class="team-image">
-                            <a href="">
-                                <img src="https://bootstrapmade.com/demo/templates/eBusiness/assets/img/team/1.jpg"
-                                     class="card-img-top" alt="...">
-                            </a>
-                            <div class="team-social-icon text-center">
-                                <ul class="d-flex">
-                                    <li><a href=""><i class="fab fa-instagram-square"></i></a></li>
-                                    <li><a href=""><i class="fab fa-instagram-square"></i></a></li>
-                                    <li><a href=""><i class="fab fa-instagram-square"></i></a></li>
-                                </ul>
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="card w-100">
+                            <img src="~/Uploads/@item.Image"
+                                 class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">@item.FullName</h5>
+                                <p class="card-text">@item.Job</p>
+
                             </div>
                         </div>
-                        <div class="card-body">
-
-                            <h5 class="card-title">John Mickel</h5>
-                            <p class="card-text">SEO.</p>
-
-                        </div>
-
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="card w-100">
-                        <img src="https://bootstrapmade.com/demo/templates/eBusiness/assets/img/team/1.jpg"
-                             class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">John Mickel</h5>
-                            <p class="card-text">SEO.</p>
+                }
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="card w-100">
-                        <img src="https://bootstrapmade.com/demo/templates/eBusiness/assets/img/team/1.jpg"
-                             class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">John Mickel</h5>
-                            <p class="card-text">SEO.</p>
 
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
